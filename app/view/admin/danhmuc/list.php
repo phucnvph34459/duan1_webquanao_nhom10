@@ -10,7 +10,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="index.php">Home</a></li>
               <li class="breadcrumb-item active">Danh sách danh mục</li>
             </ol>
           </div>
@@ -20,6 +20,10 @@
 
     <!-- Main content -->
     <section class="content">
+    <div class="card-footer clearfix">
+     
+     <a href="index.php?act=adddm"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Thêm danh mục</button></a> 
+    </div>
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
@@ -35,17 +39,27 @@
                     <th>Trạng thái</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <?php 
+                  foreach($listdanhmuc as $danh_muc){
+                    extract($danh_muc);
+                    $suadm="index.php?act=suadm&iddm=".$iddm;
+                    $xoadm="index.php?act=xoadm&iddm=".$iddm;
+                    echo ' <tbody>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a href="index.php?act=suadm"><input type="button" value="Sửa" name="" id=""></a>
-                    <a href=""><input type="button" value="Xóa" name="" id=""></a>
+                    <td>'.$iddm.'</td>
+                    <td>'.$ten_danhmuc.'</td>
+                    <td>'.$mo_ta.'</td>
+                    <td>'.$trang_thai.'</td>
+                    <td><a href="'.$suadm.'"><input type="button" value="Sửa" name="" id=""></a>
+                    <a href="'.$xoadm.'"><input type="button" value="Xóa" name="" id=""></a>
                     </td>
                   </tr>
                   </tbody>
+';
+                  }
+                 
+
+                  ?>
                 </table>
               </div>
               <!-- /.card-body -->

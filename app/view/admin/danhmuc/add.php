@@ -23,27 +23,30 @@
               <!-- form start -->
               <form class="form-horizontal" action="index.php?act=adddm" method="POST">
                 <div class="card-body">
-                  <div class="form-group row">
+                <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Mã loại</label>
-                    <div class="col-sm-10">
-                      <input type="Mã loại" class="form-control" id="inputEmail3" placeholder="Mã loại">
-                    </div>
+                    <input type="text" name="maloai" class="form-control" id="inputEmail3" placeholder="Nhập vào mã loại">
                   </div>
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Tên danh mục</label>
-                    <div class="col-sm-10">
-                      <input type="Tên danh mục" class="form-control" id="inputEmail3" placeholder="tên danh mục">
-                    </div>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Tên loại</label>
+                    <input type="text" name="tenloai" class="form-control" id="inputEmail3" placeholder="Nhập vào tên loại">
+                  </div>
+                   <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Trạng thái</label>
+                    <input type="text" name="trang_thai" class="form-control" id="inputEmail3" placeholder="Nhập vào trạng thái">
                   </div>
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Mô tả</label>
                     <textarea name="mota" id="" cols="400" rows="10"></textarea>
                   </div>
                 </div>
+               
                 <!-- /.card-body -->
                 <div class="card-footer">
-                <a href="index.php?act=listdm"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Thêm Mới</button></a> 
+
+                <a href="index.php?act=listdm"><input  type="button" value="DANH SÁCH"></a>
                   <button type="reset" value="Nhập lại" class="btn btn-default float-right">Nhập lại</button>
+                  <input type="submit" value="THÊM MỚI" name='themmoi'>
                 </div>
                 <?php if(isset($thongbao)&&($thongbao!="")) echo $thongbao; ?>
                 <!-- /.card-footer -->

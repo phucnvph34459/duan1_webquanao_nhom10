@@ -60,6 +60,7 @@
                 <a href="index.php?act=listsp"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Thêm Mới</button></a> 
                   <button type="reset" value="Nhập lại" class="btn btn-default float-right">Nhập lại</button>
                 </div>
+                <?php if(isset($thongbao)&&($thongbao!="")) echo $thongbao; ?>
                 <!-- /.card-footer -->
               </form>
             </div>
