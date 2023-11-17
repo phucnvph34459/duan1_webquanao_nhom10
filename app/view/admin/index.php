@@ -32,8 +32,8 @@ if (isset($_GET['act'])) {
             include "danhmuc/update.php";
             break;
         case 'xoadm':
-            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-                delete_danhmuc($_GET['id']);
+            if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
+                delete_danhmuc($_GET['iddm']);
             }
             $listdanhmuc = loadall_danhmuc();
             include "danhmuc/list.php";
@@ -132,7 +132,9 @@ if (isset($_GET['act'])) {
             break;
         case 'updatedh':
             include "donhang/update.php";
-            break; 
+            break;
+        //lienhe
+
     }
 } else {
     include "home.php";

@@ -37,7 +37,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-tem">
-                <a href="index.php?act=dskh" class="nav-link">Quản lí user</a>
+                <a href="index.php?act=dskh" class="nav-link">Quản lí tài khoản</a>
                </li>
                <li class="nav-tem">
                 <a href="index.php?act=listdm" class="nav-link">Quản lí danh mục</a>
@@ -52,13 +52,10 @@
                 <a href="index.php?act=listbv" class="nav-link">Quản lí bài viết</a>
                </li>
                <li class="nav-tem">
-                <a href="" class="nav-link">Quản lí đơn hàng</a>
+                <a href="index.php?act=listdh" class="nav-link">Quản lí đơn hàng</a>
                </li>
                <li class="nav-tem">
-                <a href="" class="nav-link">Quản lí liên hệ</a>
-               </li>
-               <li class="nav-tem">
-                <a href="" class="nav-link">Quản lí banner</a>
+                <a href="index.php?act=dslh" class="nav-link">Quản lí liên hệ</a>
                </li>
         </ul>
       </nav>
