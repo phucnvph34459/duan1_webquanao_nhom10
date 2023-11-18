@@ -37,16 +37,26 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a href="index.php?act=suabv"><input type="button" value="Sửa" name="" id=""></a>
-                    <a href=""><input type="button" value="Xóa" name="" id=""></a>
-                    </td>
-                  </tr>
+                    <?php
+                    foreach ($listbaiviet as $bv) {
+                      extract($bv);
+                      $xoabv= "index.php?act=xoabv&idbv=".$id_baiviet;
+                      $suabv= "index.php?act=suabv&idbv=".$id_baiviet;
+                      echo '
+                      <tr>
+                      <td>'.$id_baiviet.'</td>
+                      <td>'.$tieu_de.'</td>
+                      <td>'.$noi_dung.'</td>
+                      <td>'.$ngay_dang.'</td>
+                      <td>'.$trang_thai.'</td>
+                      <td>
+                      <a href="'.$suabv.'"><input type="button" value="Sửa" name="" id=""></a>
+                      <a href="'.$xoabv.'"><input type="button" value="Xóa" name="" id=""></a>
+                      </td>
+                    </tr>
+                      ' ;
+                    }
+                    ?>
                   </tbody>
                 </table>
               </div>

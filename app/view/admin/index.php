@@ -1,7 +1,8 @@
 <?php
 include "../../model/pdo.php";
 include "../../model/danhmuc.php";
-
+include "../../model/baiviet.php";
+include "../../model/lienhe.php";
 include "header.php";
 
 
@@ -114,19 +115,36 @@ if (isset($_GET['act'])) {
             break;
         //baiviet
         case 'listbv':
+            $listbaiviet = loadall_baiviet();
             include "baiviet/list.php";
             break;
         case 'addbv':
+            if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
+                $tieude = $_POST['tieu_de'];
+                $noi_dung = $_POST['noi_dung'];
+               $ngaydang=$_POST['ngay_dang'];
+               $trang_thai=$_POST['trang_thai'];
+                insert_baiviet($tieude,$noi_dung,$ngaydang,$trang_thai);
+                $thongbao = "thêm thành công";
+             }
             include "baiviet/add.php";
             break; 
 
         case 'xoabv':
+            if (isset($_GET['idbv']) && ($_GET['idbv'] > 0)) {
+                delete_baiviet($_GET['idbv']);
+            }
+            $listbaiviet = loadall_baiviet();
             include "baiviet/list.php";
             break;
         case 'suabv':
+            if (isset($_GET['idbv']) && ($_GET['idbv'] > 0)) {
+                $bv = loadone_baiviet($_GET['idbv']);
+            }
+            $listbaiviet = loadall_baiviet();
             include "baiviet/update.php";
             break;
-        //donhang
+       // donhang
         case 'listdh':
             include "donhang/list.php";
             break;
@@ -134,6 +152,13 @@ if (isset($_GET['act'])) {
             include "donhang/update.php";
             break;
         //lienhe
+        case 'listlh':
+            $listlienhe = loadall_lienhe();
+            include "lienhe/list.php";
+            break;
+        // case 'updatelh':
+        //     include "lienhe/update.php";
+        //     break;
 
     }
 } else {
