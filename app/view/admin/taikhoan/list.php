@@ -40,22 +40,32 @@
                     <th>Vai trò</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <?php 
+                  foreach( $listkhachhang as $khach_hang){
+                    extract($khach_hang);
+                    $suatk="index.php?act=suatk&id_khachhang=".$id_khachhang;
+                    $xoatk="index.php?act=xoatk&id_khachhang=".$id_khachhang;
+                 echo' <tbody>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a href="index.php?act=suatk"><input type="button" value="Sửa" name="" id=""></a>
-                    <a href=""><input type="button" value="Xóa" name="" id=""></a>
+                    <td>'.$id_khachhang.'</td>
+                    <td>'.$tai_khoan.'</td>
+                    <td>'.$mat_khau.'</td>
+                    <td>'.$ho_ten.'</td>
+                    <td>'.$nam_sinh.'</td>
+                    <td>'.$dia_chi.'</td>
+                    <td>'.$email.'</td>
+                    <td>'.$so_dt.'</td>
+                    <td>'.$vai_tro.'</td>
+                    <td><a href="'. $suatk.'"><input type="button" value="Sửa" name="" id=""></a>
+                    <a href="'.$xoatk.'"><input type="button" value="Xóa" name="" id=""></a>
                     </td>
                   </tr>
-                  </tbody>
+                  </tbody>';
+
+                  }
+                 
+                  ?>
+                 
                 </table>
               </div>
               <!-- /.card-body -->

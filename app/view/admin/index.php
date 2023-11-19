@@ -1,8 +1,9 @@
 <?php
 include "../../model/pdo.php";
 include "../../model/danhmuc.php";
-include "../../model/baiviet.php";
-include "../../model/lienhe.php";
+include "../../model/sanpham.php";
+include "../../model/taikhoan.php";
+
 include "header.php";
 
 
@@ -55,55 +56,103 @@ if (isset($_GET['act'])) {
             
         //sanpham    
         case 'addsp':
-            // if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
-            //     $iddm = $_POST['iddm'];
-            //     $name = $_POST['name'];
-            //     $gia = $_POST['gia'];
-            //     $mo_ta = $_POST['mo_ta'];
-            //     $so_luong = $_POST['so_luong'];
-            //     $luot_xem = $_POST['luot_xem'];
-            //     $hinh_anh = $_FILES['hinh_anh']['name'];
-            //     $target_dir = "../upload/";
-            //     $target_file = $target_dir . basename($_FILES['hinh_anh']['name']);
-            //     if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file)) {
-            //     } else {
-            //     }
-            //     insert_sanpham($name, $gia, $hinh_anh, $mo_ta,$so_luong,$luot_xem, $iddm);
-            //     $thongbao = "Thêm thành công";
-            // }
+            if (isset($_POST['themmoi']) && ($_POST['themmoi'])) {
+                $iddm = $_POST['iddm'];
+                $name = $_POST['name'];
+                $gia = $_POST['gia'];
+                $mo_ta = $_POST['mo_ta'];
+                $so_luong = $_POST['so_luong'];
+                $hinh = $_FILES['hinh']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES['hinh']['name']);
+                if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
+                } else {
 
-            // $listdanhmuc = loadall_danhmuc();
+                }
+                insert_sanpham($name,$gia,$hinh,$mo_ta,$so_luong,$iddm);
+                $thongbao = "Thêm thành công";
+            }
+            $listdanhmuc = loadall_danhmuc();
             include "sanpham/add.php";
             break;
         case 'listsp':
-            // if (isset($_POST['listok']) && ($_POST['listok'])) {
-            //     $kyw = $_POST['kyw'];
-            //     $iddm = $_POST['iddm'];
-            // } else {
-            //     $kyw = '';
-            //     $iddm = 0;
-            // }
-            // $listdanhmuc = loadall_danhmuc();
-            // $listsanpham = loadall_sanpham($kyw, $iddm);
+            $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
             break;
         case 'xoasp':
+            case 'xoasp':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    delete_sanpham($_GET['id']);
+                }
+                $listsanpham = loadall_sanpham("", 0);
             include "sanpham/list.php";
             break;
         case 'suasp':
+            if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+
+                $sanpham = loadone_sanpham($_GET['id']);
+            }
+            $listdanhmuc = loadall_danhmuc();
             include "sanpham/update.php";
+            break;
+        case 'updatesp':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $iddm = $_POST['iddm'];
+                $id_sanpham = $_POST['id_sanpham'];
+                $name = $_POST['name'];
+                $gia = $_POST['gia'];
+                $mo_ta = $_POST['mo_ta'];
+                $so_luong = $_POST['so_luong'];
+                $hinh_anh = $_FILES['hinh_anh']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES['hinh_anh']['name']);
+                if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file)) {
+                } else {
+
+                }
+                update_sanpham($id_sanpham,$name,$gia,$hinh_anh,$mo_ta,$so_luong,$iddm);
+                $thongbao = "Cập nhật thành công";
+            }
+            $listdanhmuc = loadall_danhmuc();
+            $listsanpham = loadall_sanpham();
+            include "sanpham/list.php";
             break;
         //khachhang
         case 'dskh':
+            $listkhachhang = loadall_khachhang();
             include "taikhoan/list.php";
             break;
         case 'xoatk':
+            if (isset($_GET['id_khachhang']) && ($_GET['id_khachhang'] > 0)) {
+                delete_khachhang($_GET['id_khachhang']);
+            }
+            $listkhachhang = loadall_khachhang("", 0);
             include "taikhoan/list.php";
             break;
         case 'suatk':
+            if (isset($_GET['id_khachhang']) && ($_GET['id_khachhang'] > 0)) {
+
+                $tk = loadone_khachhang($_GET['id_khachhang']);
+            }
+            $listkhachhang = loadall_khachhang();
             include "taikhoan/update.php";
             break;
         case 'updatetk':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $tai_khoan = $_POST['tai_khoan'];
+                $mat_khau = $_POST['mat_khau'];
+                $ho_ten = $_POST['ho_ten'];
+                $nam_sinh = $_POST['nam_sinh'];
+                $dia_chi = $_POST['dia_chi'];
+                $email = $_POST['email'];
+                $so_dt = $_POST['so_dt'];
+                $vai_tro = $_POST['vai_tro'];
+                $id_khachhang = $_POST['id'];
+
+                update_khachhang($id_khachhang,$tai_khoan,$mat_khau,$ho_ten,$nam_sinh,$dia_chi,$email,$so_dt,$vai_tro );
+                $thongbao = "cập nhật thành công!";
+            }
+            $listkhachhang = loadall_khachhang();
             include "taikhoan/list.php";
             break;
         //binhluan
@@ -115,36 +164,19 @@ if (isset($_GET['act'])) {
             break;
         //baiviet
         case 'listbv':
-            $listbaiviet = loadall_baiviet();
             include "baiviet/list.php";
             break;
         case 'addbv':
-            if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
-                $tieude = $_POST['tieu_de'];
-                $noi_dung = $_POST['noi_dung'];
-               $ngaydang=$_POST['ngay_dang'];
-               $trang_thai=$_POST['trang_thai'];
-                insert_baiviet($tieude,$noi_dung,$ngaydang,$trang_thai);
-                $thongbao = "thêm thành công";
-             }
             include "baiviet/add.php";
             break; 
 
         case 'xoabv':
-            if (isset($_GET['idbv']) && ($_GET['idbv'] > 0)) {
-                delete_baiviet($_GET['idbv']);
-            }
-            $listbaiviet = loadall_baiviet();
             include "baiviet/list.php";
             break;
         case 'suabv':
-            if (isset($_GET['idbv']) && ($_GET['idbv'] > 0)) {
-                $bv = loadone_baiviet($_GET['idbv']);
-            }
-            $listbaiviet = loadall_baiviet();
             include "baiviet/update.php";
             break;
-       // donhang
+        //donhang
         case 'listdh':
             include "donhang/list.php";
             break;
@@ -152,13 +184,6 @@ if (isset($_GET['act'])) {
             include "donhang/update.php";
             break;
         //lienhe
-        case 'listlh':
-            $listlienhe = loadall_lienhe();
-            include "lienhe/list.php";
-            break;
-        // case 'updatelh':
-        //     include "lienhe/update.php";
-        //     break;
 
     }
 } else {

@@ -1,6 +1,17 @@
 
  <!-- Content Wrapper. Contains page content -->
   <div class="content-warpper" style="margin-left:290px;margin-right:20px;margin-top:40px">
+   <!-- Content Header (Page header) -->
+   <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Thống kê</h1>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+ <!-- Horizontal Form -->
             <!-- Small Box (Stat card) -->
         <div class="row">
           <div class="col-lg-3 col-6">

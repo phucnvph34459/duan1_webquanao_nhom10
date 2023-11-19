@@ -55,7 +55,7 @@
                 <a href="index.php?act=listdh" class="nav-link">Quản lí đơn hàng</a>
                </li>
                <li class="nav-tem">
-                <a href="index.php?act=listlh" class="nav-link">Quản lí liên hệ</a>
+                <a href="index.php?act=dslh" class="nav-link">Quản lí liên hệ</a>
                </li>
         </ul>
       </nav>

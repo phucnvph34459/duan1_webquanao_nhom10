@@ -23,42 +23,46 @@
               <!-- form start -->
               <form class="form-horizontal" action="index.php?act=addsp" method="POST" enctype="multipart/form-data">
                 <div class="card-body">
+                <div class="row2 mb10 form_content_container">
+                <label> Danh mục </label> <br>
+                <select name="iddm" id="" style="float:left;">
+                <?php
+                foreach($listdanhmuc as $danh_muc){
+                  extract($danh_muc);
+                  echo '<option value="'.$iddm.'">'.$ten_danhmuc.'</option>';
+                }
+                ?>
+                
+                </select>
+                <br>
                 <div class="form-group row">
-                   <label>Danh mục</label><br>
-                   <div class="col-sm-10" style="margin-left: 200px;">
-                     <select name="" id="">
-                    <option value="1">Áo</option>
-                    <option value="2">Quần</option>
-                   </select>
-                    </div>   
-                  </div>
-                  <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Tên sản phẩm</label>
-                    <div class="col-sm-10">
-                      <input type="Text" class="form-control" id="inputEmail3" placeholder="Tên sản phẩm">
-                    </div>
+                    <input type="text" name="name" class="form-control" id="inputEmail3" placeholder="Nhập vào tên sản phẩm">
                   </div>
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Giá sản phẩm</label>
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputEmail3" placeholder="Giá sản phẩm">
-                    </div>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">giá sản phẩm</label>
+                    <input type="text" name="gia" class="form-control" id="inputEmail3" placeholder="Nhập vào giá sản phẩm">
                   </div>
-                  <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Ảnh sản phẩm</label>
-                    <div class="col-sm-10">
-                      <input type="file" name="hinh" placeholder="nhập vào hình ảnh">
-                    </div>
+                   <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Hình ảnh</label>
+                    <input type="file" name="hinh">
                   </div>
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Mô tả</label>
-                    <textarea name="mota" id="" cols="400" rows="10"></textarea>
+                    <textarea name="mo_ta" id="" cols="400" rows="10"></textarea>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Số lượng</label>
+                    <input type="text" name="so_luong" class="form-control" id="inputEmail3" placeholder="Nhập vào số lượng">
                   </div>
                 </div>
+               
                 <!-- /.card-body -->
                 <div class="card-footer">
-                <a href="index.php?act=listsp"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Thêm Mới</button></a> 
+
+                <a href="index.php?act=listsp"><input  type="button" value="DANH SÁCH"></a>
                   <button type="reset" value="Nhập lại" class="btn btn-default float-right">Nhập lại</button>
+                  <input type="submit" value="THÊM MỚI" name='themmoi'>
                 </div>
                 <?php if(isset($thongbao)&&($thongbao!="")) echo $thongbao; ?>
                 <!-- /.card-footer -->
