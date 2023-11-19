@@ -1,4 +1,5 @@
-
+main
+d2fa5da
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -26,18 +27,21 @@
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Tiêu đề</label>
                     <div class="col-sm-10">
-                      <input type="Text" class="form-control" id="inputEmail3" placeholder="Tiêu đề bài viết">
+                    
+                      <input type="Text" name ="tieu_de" class="form-control" id="inputEmail3" placeholder="Tiêu đề bài viết">
                     </div>
-                  </div>
+</div>
                   <div class="form-group row">
                     <label for="inputPassword3" class="col-sm-2 col-form-label">Nội dung</label>
-                    <textarea name="mota" id="" cols="400" rows="10"></textarea>
+                    
+                    <textarea name="noi_dung" id="" cols="400" rows="10"></textarea>
                   </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Ngày đăng</label>
                     <div class="col-sm-10">
-                      <input type="date" class="form-control" id="inputEmail3" placeholder="Ngày đăng">
+                    
+                      <input type="date" name="ngay_dang" class="form-control" id="inputEmail3" placeholder="Ngày đăng">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -46,17 +50,13 @@
                   </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                <a href="index.php?act=listbv"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Thêm Mới</button></a> 
+
+                <a href="index.php?act=listbv"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Quản Lí Bài Viết</button></a> 
+                <input type="submit" value="THÊM MỚI" name='themmoi'>
                   <button type="reset" value="Nhập lại" class="btn btn-default float-right">Nhập lại</button>
                 </div>
                 <!-- /.card-footer -->
               </form>
+              <?php if(isset($thongbao)&&($thongbao!="")) echo $thongbao; ?>
             </div>
             <!-- /.card -->
-
-    
- 
-     <!-- END HEADER -->
-
-       
-    </div>
