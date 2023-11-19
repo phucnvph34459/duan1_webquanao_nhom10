@@ -40,6 +40,10 @@
                       <input type="date" class="form-control" id="inputEmail3" placeholder="Ngày đăng">
                     </div>
                   </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Trạng thái</label>
+                    <input type="text" name="trang_thai" class="form-control" id="inputEmail3" placeholder="Nhập vào trạng thái">
+                  </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
                 <a href="index.php?act=listbv"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Thêm Mới</button></a> 
