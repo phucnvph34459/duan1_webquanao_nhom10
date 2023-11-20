@@ -13,7 +13,7 @@ function pdo_execute($sql){
     try{
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
+        $stmt->execute($sql_args);// chuẩn bị thực thi
     }
     catch(PDOException $e){
         throw $e;
@@ -28,7 +28,7 @@ function pdo_query($sql){
         $conn = pdo_get_connection();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
-        $rows = $stmt->fetchAll();
+        $rows = $stmt->fetchAll();// load
         return $rows;
     }
     catch(PDOException $e){

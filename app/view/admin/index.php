@@ -84,11 +84,11 @@ if (isset($_GET['act'])) {
             include "sanpham/list.php";
             break;
         case 'xoasp':
-            case 'xoasp':
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_sanpham($_GET['id']);
                 }
                 $listsanpham = loadall_sanpham(" ", 0);
+                //loadall_sanpham()
             include "sanpham/list.php";
             break;
         case 'suasp':
@@ -212,13 +212,44 @@ if (isset($_GET['act'])) {
             include "donhang/update.php";
             break;
         //lienhe
+        case 'addlh':
+            if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
+                $noi_dung = $_POST['noi_dung'];
+                $trang_thai = $_POST['trang_thai']; 
+                $id_khachhang=$_POST['id_khachhang'];
+                insert_lienhe($noi_dung,$trang_thai,$id_khachhang);
+                $thongbao = "thêm thành công";
+            }
+            $listkhachhang=loadall_khachhang();
+            include "lienhe/add.php";
+            break;
         case 'listlh':
             $listlienhe = loadall_lienhe();
             include "lienhe/list.php";
             break;
-        // case 'updatelh':
-        //     include "lienhe/update.php";
-        //     break;
+            case 'sualh':
+                if (isset($_GET['idlh']) && ($_GET['idlh'] > 0)) {
+    
+                    $dm = loadone_lienhe($_GET['idlh']);
+                }
+                include "lienhe/update.php";
+                break;
+            case 'xoalh':
+                if (isset($_GET['idlh']) && ($_GET['idlh'] > 0)) {
+                    delete_lienhe($_GET['idlh']);
+                }
+                $listlienhe = loadall_lienhe();
+                include "lienhe/list.php";
+                break;
+            case 'updatelh':
+                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                    $tenloai = $_POST['id_lienhe'];
+                    $mo_ta = $_POST['noi_dung'];
+                    $trang_thai = $_POST['trang_thai']; 
+                    $iddm = $_POST['id_khachhang'];
+                    update_lienhe($idlh, $id_lienhe,$noi_dung,$trang_thai,);
+                    $thongbao = "cập nhật thành công";
+                }
     }
 } else {
     include "home.php";
