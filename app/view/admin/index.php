@@ -5,6 +5,7 @@ include "../../model/sanpham.php";
 include "../../model/taikhoan.php";
 include "../../model/baiviet.php";
 include "../../model/lienhe.php";
+include "../../model/binhluan.php";
 
 
 include "header.php";
@@ -87,7 +88,7 @@ if (isset($_GET['act'])) {
                 if (isset($_GET['id']) && ($_GET['id'] > 0)) {
                     delete_sanpham($_GET['id']);
                 }
-                $listsanpham = loadall_sanpham("", 0);
+                $listsanpham = loadall_sanpham(" ", 0);
             include "sanpham/list.php";
             break;
         case 'suasp':
@@ -160,10 +161,17 @@ if (isset($_GET['act'])) {
             break;
         //binhluan
         case 'dsbl':
+             
+            $listbinhluan = loadall_binhluan(0);
             include "binhluan/list.php";
             break;
         case 'xoabl':
             include "binhluan/list.php";
+            if (isset($_GET['idbl']) && ($_GET['idbl'] > 0)) {
+                delete_binhluan($_GET['idbl']);
+                header("Location: index.php?act=dsbl");
+            }
+            $listbinhluan = loadall_binhluan(0);
             break;
         //baiviet
         case 'listbv':
