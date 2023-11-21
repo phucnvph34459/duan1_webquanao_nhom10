@@ -5,11 +5,9 @@ include "../../model/sanpham.php";
 include "../../model/taikhoan.php";
 include "../../model/baiviet.php";
 include "../../model/lienhe.php";
-<<<<<<< HEAD
 include "../../model/donhang.php";
-=======
 include "../../model/binhluan.php";
->>>>>>> 64dbb8dd4bbaeac3e56daa1be9f61a10620af7c0
+
 
 
 include "header.php";
