@@ -5,6 +5,7 @@ include "../../model/sanpham.php";
 include "../../model/taikhoan.php";
 include "../../model/baiviet.php";
 include "../../model/lienhe.php";
+include "../../model/donhang.php";
 
 
 include "header.php";
@@ -150,7 +151,7 @@ if (isset($_GET['act'])) {
                 $email = $_POST['email'];
                 $so_dt = $_POST['so_dt'];
                 $vai_tro = $_POST['vai_tro'];
-                $id_khachhang = $_POST['id'];
+                $id_khachhang = $_POST['id_khachhang'];
 
                 update_khachhang($id_khachhang,$tai_khoan,$mat_khau,$ho_ten,$nam_sinh,$dia_chi,$email,$so_dt,$vai_tro );
                 $thongbao = "cập nhật thành công!";
@@ -179,6 +180,7 @@ if (isset($_GET['act'])) {
                 insert_baiviet($tieude,$noi_dung,$ngaydang,$trang_thai);
                 $thongbao = "thêm thành công";
              }
+             $listbaiviet = loadall_baiviet();
             include "baiviet/add.php";
             break; 
 
@@ -198,6 +200,7 @@ if (isset($_GET['act'])) {
             break;
         //donhang
         case 'listdh':
+            $listdonhang = loadall_donhang();
             include "donhang/list.php";
             break;
         case 'updatedh':

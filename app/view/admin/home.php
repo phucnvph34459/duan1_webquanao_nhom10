@@ -19,7 +19,7 @@
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>1</h3>
-                <p>Quản lí user</p>
+                <p>Thống kê sản phẩm</p>
               </div>
               <div class="icon">
                 <i class="fas fa-shopping-cart"></i>
@@ -36,7 +36,7 @@
               <div class="inner">
                 <h3>2</h3>
 
-                <p>Quản lí danh mục</p>
+                <p>Thống kê đơn hàng</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -53,7 +53,7 @@
               <div class="inner">
                 <h3>3</h3>
 
-                <p>Quản lí sản phẩm</p>
+                <p>Thống kê tài khoản</p>
               </div>
               <div class="icon">
                 <i class="fas fa-user-plus"></i>
@@ -70,7 +70,7 @@
               <div class="inner">
                 <h3>4</h3>
 
-                <p>Quản lí bình luận</p>
+                <p>Thống kê bình luận</p>
               </div>
               <div class="icon">
                 <i class="fas fa-chart-pie"></i>
