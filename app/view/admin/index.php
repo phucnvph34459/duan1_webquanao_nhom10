@@ -218,10 +218,11 @@ if (isset($_GET['act'])) {
         //lienhe
         case 'addlh':
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
+                $ho_ten = $_POST['ho_ten'];
+                $dia_chi = $_POST['dia_chi']; 
                 $noi_dung = $_POST['noi_dung'];
-                $trang_thai = $_POST['trang_thai']; 
                 $id_khachhang=$_POST['id_khachhang'];
-                insert_lienhe($noi_dung,$trang_thai,$id_khachhang);
+                insert_lienhe($ho_ten,$dia_chi,$noi_dung,$id_khachhang);
                 $thongbao = "thêm thành công";
             }
             $listkhachhang=loadall_khachhang();
@@ -240,7 +241,8 @@ if (isset($_GET['act'])) {
                 break;
             case 'xoalh':
                 if (isset($_GET['idlh']) && ($_GET['idlh'] > 0)) {
-                    delete_lienhe($_GET['idlh']);
+                    $id_lienhe=$_GET['idlh'];
+                    delete_lienhe($id_lienhe);
                 }
                 $listlienhe = loadall_lienhe();
                 include "lienhe/list.php";
