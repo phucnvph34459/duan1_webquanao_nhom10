@@ -72,7 +72,7 @@
       </div>
       <!-- /.container-fluid -->
       <div class="card-footer clearfix">
-               <a href="index.php?act=adddm"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Thêm đơn hàng</button></a> 
+               <a href="index.php?act=addd"><button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i>Thêm đơn hàng</button></a> 
               </div>
             </div>
     </section>

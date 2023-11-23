@@ -4,7 +4,7 @@
       <div class="swiper-container swiper-slide-gap home-slider-container default-slider-container">
         <div class="swiper-wrapper home-slider-wrapper slider-default">
           <div class="swiper-slide">
-            <div class="slider-content-area" data-bg-img="assets/img/slider/slider-01.jpg">
+            <div class="slider-content-area" data-bg-img="assets/img/slider/screenshot_1700632516.png">
               <div class="slider-content">
                 <h5 class="sub-title">BEST PRICE : $866</h5>
                 <h2 class="title">NEW ARRIVAL</h2>
@@ -15,9 +15,9 @@
             </div>
           </div>
           <div class="swiper-slide">
-            <div class="slider-content-area" data-bg-img="assets/img/slider/slider-02.png">
+            <div class="slider-content-area" data-bg-img="assets/img/slider/2.png">
               <div class="slider-content">
-                <h5 class="sub-title">BEST PRICE : $866</h5>
+                <h5 class="sub-title">BEST PRICE : $666</h5>
                 <h2 class="title">NEW ARRIVAL</h2>
                 <h4>70% OFF THIS WINTER</h4>
                 <p>There are many variations of passages of Lorem Ipsum availables, but the majority have suffered alteration in some form.</p>
@@ -34,60 +34,6 @@
     </section>
     <!--== End Hero Area Wrapper ==-->
 
-    <!--== Start Feature Area Wrapper ==-->
-    <section class="feature-area">
-      <div class="container pb-1">
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Feature Item ==-->
-            <div class="feature-icon-box">
-              <div class="inner-content">
-                <div class="icon-box">
-                  <i class="icon ei ei-icon_pin_alt"></i>
-                </div>
-                <div class="content">
-                  <h5 class="title">Free shipping worldwide</h5>
-                  <p>Freeship over oder $100</p>
-                </div>
-              </div>
-            </div>
-            <!--== End Feature Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Feature Item ==-->
-            <div class="feature-icon-box">
-              <div class="inner-content">
-                <div class="icon-box">
-                  <i class="icon ei ei-icon_headphones"></i>
-                </div>
-                <div class="content">
-                  <h5 class="title">Support 24/7</h5>
-                  <p>Contact us 24 hours a day</p>
-                </div>
-              </div>
-            </div>
-            <!--== End Feature Item ==-->
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <!--== Start Feature Item ==-->
-            <div class="feature-icon-box">
-              <div class="inner-content mb-0">
-                <div class="icon-box">
-                  <i class="icon ei ei-icon_creditcard"></i>
-                </div>
-                <div class="content">
-                  <h5 class="title">100% secure payment</h5>
-                  <p>Your payment are safe with us.</p>
-                </div>
-              </div>
-            </div>
-            <!--== End Feature Item ==-->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Feature Area Wrapper ==-->
-
     <!--== Start Product Area Wrapper ==-->
     <section class="product-area">
       <div class="container product-pb" data-padding-bottom="25">
@@ -96,13 +42,13 @@
             <div class="product-category-tab-wrap">
               <ul class="nav nav-tabs product-category-nav justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="best-seller-tab" data-bs-toggle="tab" data-bs-target="#bestSeller" type="button" role="tab" aria-controls="bestSeller" aria-selected="true">Best Seller</button>
+                  <button class="nav-link active" id="best-seller-tab" data-bs-toggle="tab" data-bs-target="#bestSeller" type="button" role="tab" aria-controls="bestSeller" aria-selected="true">Bán chạy</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="most-view-tab" data-bs-toggle="tab" data-bs-target="#mostView" type="button" role="tab" aria-controls="mostView" aria-selected="false">Most view</button>
+                  <button class="nav-link" id="most-view-tab" data-bs-toggle="tab" data-bs-target="#mostView" type="button" role="tab" aria-controls="mostView" aria-selected="false">Hàng mới về</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="new-arrivals-tab" data-bs-toggle="tab" data-bs-target="#newArrivals" type="button" role="tab" aria-controls="newArrivals" aria-selected="false">New Arrivals</button>
+                  <button class="nav-link" id="new-arrivals-tab" data-bs-toggle="tab" data-bs-target="#newArrivals" type="button" role="tab" aria-controls="newArrivals" aria-selected="false">Hàng giảm giá</button>
                 </li>
               </ul>
               <div class="tab-content product-category-content" id="myTabContent">
@@ -1469,40 +1415,13 @@
     </section>
     <!--== End Product Area Wrapper ==-->
 
-    <!--== Start Single Banner Wrapper ==-->
-    <section>
-      <div class="container pt-0 pb-0">
-        <div class="row">
-          <div class="col-sm-6">
-            <!--== Start Single Banner Item ==-->
-            <div class="single-banner-image">
-              <a href="shop.html">
-                <img class="w-100" src="assets/img/shop/banner/3.jpg" alt="Image-HasTech">
-              </a>
-            </div>
-            <!--== End Single Banner Item ==-->
-          </div>
-          <div class="col-sm-6">
-            <!--== Start Single Banner Item ==-->
-            <div class="single-banner-image mb-0">
-              <a href="shop.html">
-                <img class="w-100" src="assets/img/shop/banner/4.jpg" alt="Image-HasTech">
-              </a>
-            </div>
-            <!--== End Single Banner Item ==-->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Single Banner Wrapper ==-->
-
     <!--== Start Product Area Wrapper ==-->
     <section class="product-area product-new-arrivals-area">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 m-auto">
             <div class="section-title text-center">
-              <h2 class="title">New Arrivals</h2>
+              <h2 class="title">Top sản phẩm bán chạy</h2>
             </div>
           </div>
         </div>
@@ -2193,79 +2112,13 @@
     </section>
     <!--== End Product Area Wrapper ==-->
 
-    <!--== Start Brand Logo Area Wrapper ==-->
-    <section class="brand-logo-area">
-      <div class="container pt-0 pb-0">
-        <div class="brand-logo-content">
-          <div class="row">
-            <div class="col-12">
-              <div class="swiper-container swiper-slide-gap brand-logo-slider-container">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <a href="shop.html"><img src="assets/img/brand-logo/1.jpg" alt="Image-HasTech"></a>
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <a href="shop.html"><img src="assets/img/brand-logo/2.png" alt="Image-HasTech"></a>
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <a href="shop.html"><img src="assets/img/brand-logo/3.jpg" alt="Image-HasTech"></a>
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <a href="shop.html"><img src="assets/img/brand-logo/4.jpg" alt="Image-HasTech"></a>
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <a href="shop.html"><img src="assets/img/brand-logo/5.png" alt="Image-HasTech"></a>
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <a href="shop.html"><img src="assets/img/brand-logo/6.jpg" alt="Image-HasTech"></a>
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                  <div class="swiper-slide">
-                    <!--== Start Brand Logo Item ==-->
-                    <div class="brand-logo-item">
-                      <a href="shop.html"><img src="assets/img/brand-logo/7.png" alt="Image-HasTech"></a>
-                    </div>
-                    <!--== End Brand Logo Item ==-->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--== End Brand Logo Area Wrapper ==-->
-
     <!--== Start Blog Area Wrapper ==-->
     <section class="blog-area">
       <div class="container">
         <div class="row">
           <div class="col-lg-7 m-auto">
             <div class="section-title text-center">
-              <h2 class="title">From our blogs</h2>
+              <h2 class="title">Bài viết</h2>
             </div>
           </div>
         </div>

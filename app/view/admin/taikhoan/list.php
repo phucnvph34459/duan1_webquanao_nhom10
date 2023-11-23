@@ -37,7 +37,7 @@
                     <th>Địa chỉ</th>
                     <th>Email</th>
                     <th>Số điện thoại</th>
-                    <th>Vai trò</th>
+                    <th>Chức vụ</th>
                   </tr>
                   </thead>
                   <?php 

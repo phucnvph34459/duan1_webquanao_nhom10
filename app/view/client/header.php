@@ -71,7 +71,7 @@
       <div class="row align-items-center">
         <div class="col-6 col-sm-4 col-lg-3">
           <div class="header-logo-area">
-            <a href="index.html">
+            <a href="index.php">
               <img class="logo-main" src="assets/img/logo.png" alt="Logo" />
               <img class="logo d-none" src="assets/img/logo-light.png" alt="Logo" />
             </a>
@@ -80,64 +80,35 @@
         <div class="col-sm-4 col-lg-7 d-none d-lg-block">
           <div class="header-navigation-area">
             <ul class="main-menu nav position-relative">
-              <li class="has-submenu"><a href="#/">Trang chủ</a>
+              <li class="has-submenu"><a href="#/">Trang chủ</a></li>
+              <li class="has-submenu"><a href="#/">Danh mục</a>
                 <ul class="submenu-nav">
-                  <li><a href="index.html">Home Demo 1</a></li>
-                  <li><a href="index-two.html">Home Demo 2</a></li>
+                  <li><a href="Quan.html">Quần</a></li>
+                  <li><a href="Ao.html">Áo</a></li>
                 </ul>
               </li>
-              <li class="has-submenu full-width"><a href="#/">Danh mục</a>
+              <li class="has-submenu full-width"><a href="#">Sản phẩm</a>
                 <ul class="submenu-nav submenu-nav-mega">
-                  <li class="mega-menu-item"><a href="#/" class="mega-title">Shop Layouts</a>
+                  <li class="mega-menu-item"><a href="#/" class="mega-title">Quần</a>
                     <ul>
-                      <li><a href="shop-3-grid.html">Shop 3 Column</a></li>
-                      <li><a href="shop-4-grid.html">Shop 4 Column</a></li>
-                      <li><a href="shop-left-sidebar.html">Shop Left Sidebar</a></li>
-                      <li><a href="shop.html">Shop Right Sidebar</a></li>
-                      <li><a href="shop-list.html">Shop Listing View</a></li>
-                      <li><a href="shop-list-left-sidebar.html">Shop List left Sidebar</a></li>
-                      <li><a href="shop-list-right-sidebar.html">Shop List Right Sidebar</a></li>
+                      <li><a href="Quannam.html">Quần nam</a></li>
+                      <li><a href="Quannu.html">Quần nữ</a></li>
                     </ul>
                   </li>
-                  <li class="mega-menu-item"><a href="#/" class="mega-title">Shop Pages</a>
+                  <li class="mega-menu-item"><a href="#/" class="mega-title">Áo</a>
                     <ul>
-                      <li><a href="login.html">My Account</a></li>
-                      <li><a href="wishlist.html">Wishlist</a></li>
-                      <li><a href="cart.html">Cart</a></li>
-                      <li><a href="checkout.html">Checkout</a></li>
-                    </ul>
-                  </li>
-                  <li class="mega-menu-item"><a href="#/" class="mega-title">WOMEN</a>
-                    <ul>
-                      <li><a href="single-product-name-1.html">Bags &amp; Purses</a></li>
-                      <li><a href="single-product-name-1.html">Beauty</a></li>
-                      <li><a href="single-product-name-1.html">Coats &amp; Jackets</a></li>
-                      <li><a href="single-product-name-1.html">Curve &amp; Plus Size</a></li>
-                      <li><a href="single-product-name-1.html">Denim</a></li>
+                      <li><a href="aonam.html">Áo nam</a></li>
+                      <li><a href="aonam.html">Áo nữ</a></li>
+                      <li><a href="aonam.html">Bommer/vancity</a></li>
+                      <li><a href="aonam.html">Hoodie</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
-              <li class="has-submenu"><a href="#/">Sản phẩm</a>
-                <ul class="submenu-nav">
-                  <li><a href="single-product-simple.html">Simple Product</a></li>
-                  <li><a href="single-product.html">Variable Product</a></li>
-                  <li><a href="single-product-affiliate.html">Affiliate Link product</a></li>
-                  <li><a href="single-product-soldout.html">Soldout Product</a></li>
-                  <li><a href="single-product-countdown.html">Countdown Product</a></li>
-                </ul>
+              
+              <li class="has-submenu"><a href="blog-grid.html">Bài viết</a>
               </li>
-              <li class="has-submenu"><a href="#/">Blog</a>
-                <ul class="submenu-nav">
-                  <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                  <li><a href="blog.html">Blog Right Sidebar</a></li>
-                  <li><a href="blog-grid.html">Blog Grid Layout</a></li>
-                  <li><a href="single-blog.html">Single Blog Left Sidebar</a></li>
-                  <li><a href="single-blog-right-sidebar.html">Single Blog Right Sidebar</a></li>
-                </ul>
-              </li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="about-us.html">About</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
             </ul>
           </div>
         </div>
@@ -149,30 +120,7 @@
                   <i class="zmdi zmdi-search icon"></i>
                 </a>
               </li>
-              <li class="currency-menu">
-                <a class="action-item" href="#/"><i class="zmdi zmdi-lock-outline icon"></i></a>
-                <ul class="currency-dropdown">
-                  <li class="currency">
-                    <a href="#/"><span class="current-currency">USD</span></a>
-                    <ul>
-                      <li class="active"><a href="#/">USD - US Dollar</a></li>
-                      <li class="#/"><a href="#/">EUR - Euro</a></li>
-                      <li class="#/"><a href="#/">GBP - British Pound</a></li>
-                      <li class="#/"><a href="#/">INR - Indian Rupee</a></li>
-                      <li class="#/"><a href="#/">BDT - Bangladesh Taka</a></li>
-                      <li class="#/"><a href="#/">JPY - Japan Yen</a></li>
-                      <li class="#/"><a href="#/">CAD - Canada Dollar</a></li>
-                      <li class="#/"><a href="#/">AUD - Australian Dollar</a></li>
-                    </ul>
-                  </li>
-                  <li class="account">
-                    <a href="#/"><span class="current-account">My account</span></a>
-                    <ul>
-                      <li><a href="login.html">Login</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+           
               <li class="mini-cart">
                 <a class="action-item" href="#/">
                   <i class="zmdi zmdi-shopping-cart-plus icon"></i>
@@ -209,6 +157,17 @@
                     <a href="checkout.html">Checkout</a>
                   </div>
                 </div>
+              </li>
+              <li class="currency-menu">
+                <a class="action-item" href="#/"><i class="zmdi zmdi-lock-outline icon"></i></a>
+                <ul class="currency-dropdown">
+                  <li class="account">
+                    <a href="#/"><span class="current-account">My account</span></a>
+                    <ul>
+                      <li><a href="login.html">Login</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

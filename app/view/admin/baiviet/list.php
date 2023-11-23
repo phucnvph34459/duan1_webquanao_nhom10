@@ -38,8 +38,8 @@
                   </thead>
                   <tbody>
                     <?php
-                    foreach ($listbaiviet as $bv) {
-                      extract($bv);
+                    foreach ($listbaiviet as $bai_viet) {
+                      extract($bai_viet);
                       $xoabv= "index.php?act=xoabv&idbv=".$id_baiviet;
                       $suabv= "index.php?act=suabv&idbv=".$id_baiviet;
                       echo '

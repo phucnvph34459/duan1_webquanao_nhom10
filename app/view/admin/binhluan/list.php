@@ -1,6 +1,5 @@
-
- <!-- Content Wrapper. Contains page content -->
- <div class="content-wrapper">
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -39,15 +38,23 @@
                   </thead>
                   <tbody>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                  <?php 
+                  foreach ($listbinhluan as $binhluan) {
+                    extract($binhluan);
+                    $xoabl="index.php?act=xoabl&idbl=".$id_binh_luan;
+                    echo ' <tbody>
+                    <td>'.$id_binh_luan.'</td>
+                    <td>'.$noi_dung.'</td>
+                    <td>'.$ngay_binh_luan.'</td>
+                    <td>'.$danh_gia.'</td>
+                    <td>'.$id_khachhang.'</td>
+                    <td>'.$id_sanpham.'</td>
                     <td>
-                    <a href=""><input type="button" value="Xóa" name="" id=""></a>
+                    <a href="'.$xoabl.'"><input type="button" value="Xóa" name=""></a>
                     </td>
+                    </tr>
+                  </tbody>';
+                  }?>
                   </tr>
                   </tbody>
                 </table>
@@ -65,6 +72,3 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-
-

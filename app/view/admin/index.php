@@ -162,8 +162,7 @@ if (isset($_GET['act'])) {
             include "taikhoan/list.php";
             break;
         //binhluan
-        case 'dsbl':
-             
+        case 'dsbl':     
             $listbinhluan = loadall_binhluan(0);
             include "binhluan/list.php";
             break;
@@ -171,7 +170,6 @@ if (isset($_GET['act'])) {
             include "binhluan/list.php";
             if (isset($_GET['idbl']) && ($_GET['idbl'] > 0)) {
                 delete_binhluan($_GET['idbl']);
-                header("Location: index.php?act=dsbl");
             }
             $listbinhluan = loadall_binhluan(0);
             break;
@@ -216,6 +214,9 @@ if (isset($_GET['act'])) {
             include "donhang/update.php";
             break;
         //lienhe
+        
+        
+        
         case 'addlh':
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
                 $noi_dung = $_POST['noi_dung'];
@@ -225,6 +226,7 @@ if (isset($_GET['act'])) {
                 $thongbao = "thêm thành công";
             }
             $listkhachhang=loadall_khachhang();
+
             include "lienhe/add.php";
             break;
         case 'listlh':
