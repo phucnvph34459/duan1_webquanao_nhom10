@@ -38,6 +38,7 @@ function loadone_sanpham($id_sanpham){
     return $sp;
 }
 
+
 function load_sanpham_cungloai($id,$iddm){
     $sql="select*from san_pham where iddm=".$iddm." AND id_sanpham <>".$id;
     $listsanpham=pdo_query($sql);

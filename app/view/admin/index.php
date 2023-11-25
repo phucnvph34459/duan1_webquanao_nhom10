@@ -123,6 +123,16 @@ if (isset($_GET['act'])) {
             $listsanpham = loadall_sanpham();
             include "sanpham/list.php";
             break;
+            case 'ctsp':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+
+                    $sanpham = loadone_sanpham($_GET['id']);
+                }
+               $listsanpham = loadall_sanpham();
+               $listdanhmuc = loadall_danhmuc();
+             
+                include 'sanpham/ctsp.php';
+                break;
         //khachhang
         case 'dskh':
             $listkhachhang = loadall_khachhang();

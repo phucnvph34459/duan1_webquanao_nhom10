@@ -164,7 +164,15 @@
                   <li class="account">
                     <a href="#/"><span class="current-account">My account</span></a>
                     <ul>
-                      <li><a href="login.html">Login</a></li>
+                      <?php 
+                      if(isset($_SESSION['tai_khoanho_ten'])&&($_SESSION['tai_khoanho_ten']!="")){
+                        echo' <li><a href="index.php?act=suathongtin">'.$_SESSION['tai_khoanho_ten'].'</a></li>';
+                      } else{
+                        ?>
+                      
+                      <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
+                      <li><a href="index.php?act=dangky">Đăng ký thành viên</a></li>
+                      <?php }?>
                     </ul>
                   </li>
                 </ul>

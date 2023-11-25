@@ -49,7 +49,7 @@
                                         <td>'.$dia_chi.'</td>
                                         <td>'.$noi_dung.'</td>
                                         <th>'.$id_khachhang.'</th>
-                                        <td><a href="'.$sualh.'"><input type="button" value="Sửa" name="" id=""></a>
+                                        <td>
                                         <a href="'.$xoalh.'"><input type="button" value="Xóa" name="" id=""></a>
                                         </td>
                                 </tr>'; }

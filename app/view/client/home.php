@@ -42,13 +42,7 @@
             <div class="product-category-tab-wrap">
               <ul class="nav nav-tabs product-category-nav justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="best-seller-tab" data-bs-toggle="tab" data-bs-target="#bestSeller" type="button" role="tab" aria-controls="bestSeller" aria-selected="true">Bán chạy</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="most-view-tab" data-bs-toggle="tab" data-bs-target="#mostView" type="button" role="tab" aria-controls="mostView" aria-selected="false">Hàng mới về</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="new-arrivals-tab" data-bs-toggle="tab" data-bs-target="#newArrivals" type="button" role="tab" aria-controls="newArrivals" aria-selected="false">Hàng giảm giá</button>
+                  <button class="nav-link active" id="best-seller-tab" data-bs-toggle="tab" data-bs-target="#bestSeller" type="button" role="tab" aria-controls="bestSeller" aria-selected="true">Hàng mới về</button>
                 </li>
               </ul>
               <div class="tab-content product-category-content" id="myTabContent">

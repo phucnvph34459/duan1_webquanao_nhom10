@@ -37,10 +37,8 @@
                     <th>Tên sản phẩm</th>
                     <th>Giá sản phẩm</th>
                     <th>Hình ảnh</th>
-                    <th>Mô tả</th>
-                    <th>Số lương</th>
-                    <th>lượt xem</th>
-                    <th>iddm</th>
+                    <th>id_danhmuc</th>
+                    <th></th>
                   </tr>
                   </thead>
                   <?php 
@@ -48,6 +46,7 @@
                     extract($san_pham);
                     $suasp="index.php?act=suasp&id=".$id_sanpham;
                     $xoasp="index.php?act=xoasp&id=".$id_sanpham;
+                    $ctsp="index.php?act=ctsp&id=".$id_sanpham;
                     $hinhpath="../upload/".$hinh_anh;
                     if(is_file($hinhpath)){
                       $hinh_anh="<img src='".$hinhpath."' height='80'>";
@@ -60,12 +59,11 @@
                     <td>'.$name.'</td>
                     <td>'.$gia.'</td>
                     <td>'.$hinh_anh.'</td>
-                    <td>'.$mo_ta.'</td>
-                    <td>'.$so_luong.'</td>
-                    <td>'.$luot_xem.'</td>
                     <td>'.$iddm.'</td>
-                    <td><a href="'.$suasp.'"><input type="button" value="Sửa" name="" id=""></a>
+                    <td>
+                    <a href="'.$suasp.'"><input type="button" value="Sửa" name="" id=""></a>
                     <a href="'.$xoasp.'"><input type="button" value="Xóa" name="" id=""></a>
+                    <a href="'.$ctsp.'"><input type="button" value="Chi tiết" name="" id=""></a>
                     </td>
                   </tr>
                   </tbody>

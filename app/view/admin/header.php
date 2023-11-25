@@ -41,7 +41,7 @@
     </ul>
     <div style="margin-left:1400px;">
     <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Đăng xuất</a>
+        <a href="" class="nav-link">Đăng xuất</a>
       </li>
     </div>
     <!-- Right navbar links -->
