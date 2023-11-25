@@ -220,13 +220,29 @@ if (isset($_GET['act'])) {
             $listdonhang = loadall_donhang();
             include "donhang/list.php";
             break;
-        case 'updatedh':
+        case 'suadh':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $ngay_dathang = $_POST['ngay_dathang'];
+                $trang_thai = $_POST['trang_thai']; 
+                $id_donhang = $_POST['id'];
+                $id_khachhang = $_POST['id_khachhang'];
+                update_donhang($id_donhang,$trang_thai,$ngay_dathang,$id_khachhang);
+                $thongbao = "cập nhật thành công";
+            }
+            $listdonhang = loadall_donhang();
             include "donhang/update.php";
             break;
+        case 'xoadh':
+            $listdonhang = loadall_donhang(0);
+            include "donhang/list.php";
+            if (isset($_GET['iddh']) && ($_GET['iddh'] > 0)) {
+                delete_donhang($_GET['iddh']);
+            }
+            include "donhang/list.php";
+            break;
+
         //lienhe
-        
-        
-        
+
         case 'addlh':
             if(isset($_POST['themmoi']) && ($_POST['themmoi'])){
                 $ho_ten = $_POST['ho_ten'];
