@@ -44,6 +44,8 @@
                     extract($donhang);
                     $suadh="index.php?act=suadh&id=".$id_donhang;
                     $xoadh="index.php?act=xoadh&iddh=".$id_donhang;
+                    $xoadh="index.php?act=xoadm&idcapnhan=".$id_donhang;
+                  //  $ctsp="index.php?act=ctsp&id=".$id_sanpham;
                     echo ' <tbody>
                   <tr>
                     <td>'.$id_donhang.'</td>
@@ -52,11 +54,13 @@
                     <td>'.$trang_thai.'</td>
                     <td><a href="'.$suadh.'"><input type="button" value="Chi Tiết" name="" id=""></a>
                     <a href="'.$xoadh.'"><input type="button" value="Xóa" name="" id=""></a>
+                   
                     </td>
                   </tr>
                   </tbody>
 ';
                   }
+                 // <a href="'.$suasp.'"><input type="button" value="Chi tiết " name="" id=""></a>
                  
 
                   ?>

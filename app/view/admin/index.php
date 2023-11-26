@@ -220,6 +220,17 @@ if (isset($_GET['act'])) {
             $listdonhang = loadall_donhang();
             include "donhang/list.php";
             break;
+            case 'suadh':
+                if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                    $ngay_dathang = $_POST['ngay_dathang'];
+                    $trang_thai = $_POST['trang_thai']; 
+                    $id_donhang = $_POST['id'];
+                    $id_khachhang = $_POST['id_khachhang'];
+                    update_donhang($id_donhang,$trang_thai,$ngay_dathang,$id_khachhang);
+                    $thongbao = "cập nhật thành công";
+                }
+                $listdonhang = loadall_donhang();
+
         case 'suadh':
             if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                 $ngay_dathang = $_POST['ngay_dathang'];
@@ -230,6 +241,46 @@ if (isset($_GET['act'])) {
                 $thongbao = "cập nhật thành công";
             }
             $listdonhang = loadall_donhang();
+       case 'updatedh':
+    if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+        $iddm = $_POST['iddm'];
+        $id_sanpham = $_POST['id_sanpham'];
+        $name = $_POST['name'];
+        $gia = $_POST['gia'];
+        $mo_ta = $_POST['mo_ta'];
+        $so_luong = $_POST['so_luong'];
+        $hinh_anh = $_FILES['hinh_anh']['name'];
+        $target_dir = "../upload/";
+        $target_file = $target_dir . basename($_FILES['hinh_anh']['name']);
+        if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file)) {
+        } else {
+
+        }
+        update_sanpham($id_sanpham,$name,$gia,$hinh_anh,$mo_ta,$so_luong,$iddm);
+        $thongbao = "Cập nhật thành công";
+    }
+    $listdanhmuc = loadall_danhmuc();
+    $listsanpham = loadall_sanpham();
+        case 'updatedh':
+            if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
+                $iddm = $_POST['iddm'];
+                $id_sanpham = $_POST['id_sanpham'];
+                $name = $_POST['name'];
+                $gia = $_POST['gia'];
+                $mo_ta = $_POST['mo_ta'];
+                $so_luong = $_POST['so_luong'];
+                $hinh_anh = $_FILES['hinh_anh']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES['hinh_anh']['name']);
+                if (move_uploaded_file($_FILES["hinh_anh"]["tmp_name"], $target_file)) {
+                } else {
+
+                }
+                update_sanpham($id_sanpham,$name,$gia,$hinh_anh,$mo_ta,$so_luong,$iddm);
+                $thongbao = "Cập nhật thành công";
+            }
+            $listdanhmuc = loadall_danhmuc();
+            $listsanpham = loadall_sanpham();
             include "donhang/update.php";
             break;
         case 'xoadh':
