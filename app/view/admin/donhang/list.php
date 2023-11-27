@@ -40,23 +40,27 @@
                   </tr>
                   </thead>
                   <?php 
-                  foreach($listdonhang as $don_hang){
-                    extract($don_hang);
+                  foreach($listdonhang as $donhang){
+                    extract($donhang);
                     $suadh="index.php?act=suadh&id=".$id_donhang;
-                    $xoadh="index.php?act=xoadm&id=".$id_donhang;
+                    $xoadh="index.php?act=xoadh&iddh=".$id_donhang;
+                    $xoadh="index.php?act=xoadm&idcapnhan=".$id_donhang;
+                  //  $ctsp="index.php?act=ctsp&id=".$id_sanpham;
                     echo ' <tbody>
                   <tr>
                     <td>'.$id_donhang.'</td>
                     <td>'.$id_khachhang.'</td>
                     <td>'.$ngay_dathang.'</td>
                     <td>'.$trang_thai.'</td>
-                    <td><a href="'.$suadh.'"><input type="button" value="Sửa" name="" id=""></a>
+                    <td><a href="'.$suadh.'"><input type="button" value="Chi Tiết" name="" id=""></a>
                     <a href="'.$xoadh.'"><input type="button" value="Xóa" name="" id=""></a>
+                   
                     </td>
                   </tr>
                   </tbody>
 ';
                   }
+                 // <a href="'.$suasp.'"><input type="button" value="Chi tiết " name="" id=""></a>
                  
 
                   ?>

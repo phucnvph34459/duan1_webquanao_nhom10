@@ -11,8 +11,7 @@ include "app/model/baiviet.php";
 include "global.php";
 
 
-
-
+$listsanpham = loadall_sanpham();
 if((isset($_GET['act']))&&($_GET['act']!="")){
     $act=$_GET['act'];
     switch($act){
