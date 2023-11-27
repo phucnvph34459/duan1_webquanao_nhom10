@@ -42,6 +42,7 @@
                             <div class="product-item">
                               <div class="inner-content">
                                 <div class="product-thumb">
+<<<<<<< Updated upstream
                                   <a href="single-product-simple.html">
                                     <img class="w-100" src="assets/img/shop/1.jpg" alt="Image-HasTech">
                                   </a>
@@ -87,6 +88,10 @@
                                 <div class="product-thumb">
                                   <a href="single-product-simple.html">
                                     <img class="w-100" src="assets/img/shop/2.jpg" alt="Image-HasTech">
+=======
+                                  <a href="aohoodie.html">
+                                    <img class="w-100" src="'.$hinhanh.'">
+>>>>>>> Stashed changes
                                   </a>
                                   <span class="sale-title sticker">Sale</span>
                                   <span class="percent-count sticker">-15%</span>
@@ -1414,8 +1419,8 @@
                   <div class="product-item">
                     <div class="inner-content">
                       <div class="product-thumb">
-                        <a href="single-product-simple.html">
-                          <img class="w-100" src="assets/img/shop/1.jpg" alt="Image-HasTech">
+                        <a href="aodanau.html">
+                          <img class="w-100" src="app/view/upload/tải xuống.jpg" alt="Image-HasTech">
                         </a>
                         <span class="sale-title sticker">Sale</span>
                         <span class="percent-count sticker">-18%</span>
@@ -1435,7 +1440,7 @@
                       </div>
                       <div class="product-desc">
                         <div class="product-info">
-                          <h4 class="title"><a href="single-product-simple.html">Meta Slevless Dress</a></h4>
+                          <h4 class="title"><a href="single-product-simple.html">Áo da nâu</a></h4>
                           <div class="star-content">
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
