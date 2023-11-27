@@ -52,6 +52,7 @@
             <div class="small-box bg-warning">
               <div class="inner">
                 <h3>3</h3>
+                
 
                 <p>Thống kê tài khoản</p>
               </div>
@@ -84,4 +85,55 @@
         </div>
         <!-- /.row -->
   </div>
+     <!-- /.card-header -->
+     <div class="card-body">
+                
+                  <!-- /.col -->
+                  <div class="col-md-4" style="margin-left: 270px;">
+                    <p class="text-center">
+                      <strong>Bảng thống kê số lượng</strong>
+                    </p>
+
+                    <div class="progress-group">
+                      Tổng số sản phẩm
+                      <span class="float-right"><b>480</b>/800</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-primary" style="width: 80%"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+
+                    <div class="progress-group">
+                      Số bình luận
+                      <span class="float-right"><b>310</b></span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-danger" style="width: 75%"></div>
+                      </div>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+                      <span class="progress-text">Đơn hàng</span>
+                      <span class="float-right"><b>160</b>/800</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-success" style="width: 60%"></div>
+                      </div>
+                    </div>
+
+                    <!-- /.progress-group -->
+                    <div class="progress-group">
+                      Tổng số tài khoản
+                      <span class="float-right"><b>250</b>/500</span>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-warning" style="width: 50%"></div>
+                      </div>
+                    </div>
+                    <!-- /.progress-group -->
+                  </div>
+                  <!-- /.col -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- ./card-body -->
+
   

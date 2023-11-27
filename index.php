@@ -1,6 +1,5 @@
 <?php 
 session_start();
-ob_start();
 include "app/model/pdo.php";
 include "app/view/client/header.php";
 include "app/model/taikhoan.php";
@@ -10,8 +9,6 @@ include "app/model/binhluan.php";
 include "app/model/baiviet.php";
 include "global.php";
 
-
-$listsanpham = loadall_sanpham();
 if((isset($_GET['act']))&&($_GET['act']!="")){
     $act=$_GET['act'];
     switch($act){
@@ -19,19 +16,17 @@ if((isset($_GET['act']))&&($_GET['act']!="")){
            if(isset($_POST['dangnhap'])&&($_POST['dangnhap'])){
             $tai_khoan=$_POST['tai_khoan'];
             $mat_khau=$_POST['mat_khau'];
-            $kq=getuserinfo($tai_khoan,$mat_khau);
-            $vai_tro=$kq[0]['vai_tro'];
-            if($vai_tro==1){
-                 $_SESSION['vai_tro']=$vai_tro;
-                 header('loaction:admin/index.php');
+            $checkkhachang=checkkhachhang($tai_khoan,$mat_khau);
+            if(is_array($checkkhachang)){
+                 $_SESSION['tai_khoan']=$tai_khoan;
+                 
+                $thongbao="Đăng nhập thành công";
+                 
             }else{
-                $_SESSION['vai_tro']=$vai_tro;
-                $_SESSION['id_taikhoan']=$kq[0]['id_khachhang'];
-                $_SESSION['tai_khoanho_ten']=$kq[0]['tai_khoan'];
-                header('loaction:index.php');
+                $thongbao="Tài khoản này không tồn tại vui lòng đăng nhập lại";
             }
            }
-            
+            include "app/view/client/dangnhap.php";
         break;
        
         case 'dangky':

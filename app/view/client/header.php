@@ -53,7 +53,16 @@
 <div class="wrapper">
 
   <!--== Start Preloader Content ==-->
-
+  <div class="preloader-wrap">
+    <div class="preloader">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
   <!--== End Preloader Content ==-->
 
   <!--== Start Header Wrapper ==-->
@@ -156,18 +165,31 @@
                     <a href="#/"><span class="current-account">My account</span></a>
                     <ul>
                       <?php 
-                      if(isset($_SESSION['tai_khoanho_ten'])&&($_SESSION['tai_khoanho_ten']!="")){
-                        echo' <li><a href="index.php?act=suathongtin">'.$_SESSION['tai_khoanho_ten'].'</a></li>';
+                      if(isset($_SESSION['tai_khoan'])){
+                       extract($_SESSION['tai_khoan']);
+                       ?>
+                       xin chào <?=$tai_khoan ?>
+                       <?php if($vai_tro==1){ ?>
+                        <a href="app/admin/index.php">Đăng nhập Admin</a>
+                       <?php }?>
+                       <li>
+                      <a href="index.php?act=quenmk">Quên mật khẩu</a>
+                      </li>
+                      <li>
+                      <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
+                      </li>
+                       <?php
                       } else{
-                        ?>
-                      
+                       ?> 
                       <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
                       <li><a href="index.php?act=dangky">Đăng ký thành viên</a></li>
                       <?php }?>
                     </ul>
                   </li>
+                  
                 </ul>
               </li>
+              
             </ul>
           </div>
         </div>

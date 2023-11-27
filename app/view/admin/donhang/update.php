@@ -1,10 +1,9 @@
+
 <?php
 if(is_array($listdonhang) ){
   extract($listdonhang);
 }
-
 ?>
-
  <!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
     <!-- Content Header (Page header) -->

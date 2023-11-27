@@ -1,50 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 
-
-<!-- Mirrored from template.hasthemes.com/julie/julie/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Nov 2023 13:19:23 GMT -->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Julie – Minimal Fashion Bootstrap 5 Template</title>
-
-    <!--== Favicon ==-->
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
-
-    <!--== Google Fonts ==-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,500i,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,600,700" rel="stylesheet">
-
-    <!--== Bootstrap CSS ==-->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <!--== Headroom CSS ==-->
-    <link href="assets/css/headroom.css" rel="stylesheet" />
-    <!--== Animate CSS ==-->
-    <link href="assets/css/animate.css" rel="stylesheet" />
-    <!--== Ionicons CSS ==-->
-    <link href="assets/css/ionicons.css" rel="stylesheet" />
-    <!--== Material Icon CSS ==-->
-    <link href="assets/css/material-design-iconic-font.css" rel="stylesheet" />
-    <!--== Elegant Icon CSS ==-->
-    <link href="assets/css/elegant-icons.css" rel="stylesheet" />
-    <!--== Font Awesome Icon CSS ==-->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
-    <!--== Swiper CSS ==-->
-    <link href="assets/css/swiper.min.css" rel="stylesheet" />
-    <!--== Fancybox Min CSS ==-->
-    <link href="assets/css/fancybox.min.css" rel="stylesheet" />
-    <!--== Slicknav Min CSS ==-->
-    <link href="assets/css/slicknav.css" rel="stylesheet" />
-
-    <!--== Main Style CSS ==-->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <style>
+<style>
         * {box-sizing: border-box}
-
-/* Full-width input fields */
-  input[type=text], input[type=password] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -52,18 +9,14 @@
   border: none;
   background: #f1f1f1;
 }
-
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
-
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
 }
-
-/* Set a style for all buttons */
 button {
   background-color: #04AA6D;
   color: white;
@@ -74,50 +27,31 @@ button {
   width: 100%;
   opacity: 0.9;
 }
-
 button:hover {
   opacity:1;
 }
-
-/* Extra styles for the cancel button */
 .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
 }
-
-/* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
   float: left;
   width: 50%;
 }
-
-/* Add padding to container elements */
 .container {
   padding: 16px;
 }
-
-/* Clear floats */
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
-
-/* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
 }
-     </style>
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
+</style>
 <!--wrapper start-->
 <div class="wrapper">
 
@@ -150,8 +84,7 @@ button:hover {
         </div>
       </div>
     </div>
-    <!--== E
-  <!--== End Preloader Content ==-->
+ 
 <form action="index.php?act=dangky" method="post">
     <div class="container">
       <h1>Đăng ký thành viên</h1>
