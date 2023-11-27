@@ -36,6 +36,64 @@ body {
   word-wrap: break-word;
 }
 
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #343434;
@@ -1650,14 +1708,14 @@ section .container-fluid {
   animation-name: fadeOut;
 }
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .slider-content-area .slider-content .sub-title {
-  color: #000;
+  color: white;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .slider-content-area .slider-content .title {
-  color: #000;
+  color: white;
   font-size: 50px;
   font-weight: 900;
   line-height: 1;
@@ -1669,7 +1727,7 @@ section .container-fluid {
   }
 }
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .slider-content-area .slider-content h4 {
-  color: #000;
+  color: white;
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 21px;
@@ -1682,7 +1740,7 @@ section .container-fluid {
   }
 }
 .home-slider-area .home-slider-container .home-slider-wrapper.slider-default .slider-content-area .slider-content p {
-  color: #000;
+  color: white;
   font-size: 17px;
   line-height: 26px;
   margin-bottom: 25px;

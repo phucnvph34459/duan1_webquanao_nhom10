@@ -32,7 +32,7 @@
                   </div>
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Nội dung</label>
-                    <input type="text" name="noi_dung" class="form-control" id="inputEmail3" placeholder="Nhập nội dung">
+                    <input type="text" name="noi_dung" class="form-control" id="inputEmail3" placeholder="Nhập email">
                   </div>
                   <div class="form-group row">
                     Khách hàng <br>

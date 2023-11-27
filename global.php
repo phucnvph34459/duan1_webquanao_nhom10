@@ -1,3 +1,4 @@
 <?php
-    $img_path ="app/view/upload/";
+$img_path='upload/';
+
 ?>
